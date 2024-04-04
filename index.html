@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   </head>
   <body>
 <!-- ABOUT US -->
@@ -24,7 +25,7 @@
     <div class="about__wrapper">
 
       <div class="about__contents">
-        <span>•ABOUT US•</span>
+        <h4 class="block-header">ABOUT US</h4>
         <h2>Trusted By Worldwide<br>Clients Since 1980.</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia molestiae dolorum tempora ut accusamus cupiditate! Nesciunt tempora reiciendis libero voluptate!</p>
         <div class="about__details">
@@ -82,7 +83,7 @@
             <img src="./images/why choose us.png" alt="">
           </div>
           <div class="whychoose__contents">
-            <span>•WHY CHOOSE US•</span>
+            <h4 class="block-header">WHY CHOOSE US</h4>
             <h2>Why Our Customers <br>Choose Working With Us</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia molestiae dolorum tempora ut accusamus cupiditate! Nesciunt tempora reiciendis libero voluptate!</p>
             <div class="whychoose__info">
@@ -142,8 +143,50 @@
         </div>   
     </div>
   </div>
-
 </section>
+
+  <!-- CLIENTS -->
+<section class="clients">
+  <h2>Trusted By Over 500 Clients Around The World</h2>
+  <div class="container">
+    <div class="clients__wrapper">
+      <div class="clients__slider">
+        <img src="./images/clients1.png" alt="">
+        <img src="./images/clients2.png" alt="">
+        <img src="./images/clients3.png" alt="">
+        <img src="./images/clients4.png" alt="">
+        <img src="./images/clients5.png" alt="">
+        <img src="./images/clients6.png" alt="">
+        <img src="./images/clients7.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+ <script>
+ var slider = tns({
+  container: ".clients__slider",
+  items:3,
+  autoplay: true,
+  autoplayButtonOutput: false,
+  controls: false,
+  mouseDrag:true,
+  nav:false,
+  slideBy: "page",
+  swipeAngle: false,
+  speed: 400,
+  gutter: 15,
+  responsive: {
+              420: {
+                items: 6,
+                gutter: 20
+              },
+            },
+});
+</script>
+
     <script>
       $(document).ready(function(){
         $(".counter").counterUp({
@@ -152,5 +195,6 @@
         });
       });
     </script>
+
   </body>
 </html>

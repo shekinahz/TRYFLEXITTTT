@@ -540,17 +540,12 @@ header .container__wrapper h1 {
     order: 1;
   }
 }
-.about__contents span {
-  font-size: 16px;
-  color: var(--primary);
-  font-weight: 500;
-}
 .about__contents h2 {
   font-size: clamp(32px, 6vw, 48px);
-  color: #fff;
+  color: var(--light);
 }
 .about__contents p {
-  color: #fff;
+  color: var(--light);
 }
 .about__details {
   display: grid;
@@ -577,17 +572,29 @@ header .container__wrapper h1 {
     gap: 2rem;
   }
 }
+.about__icons {
+  margin-top: 2rem;
+  position: relative;
+  display: inline-block;
+  width: 68px;
+  height: 68px;
+  background-color: rgba(9, 175, 244, 0.15);
+  padding: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
 .about__icons i {
-  margin-top: 3rem;
-  margin-right: 1.25rem;
-  margin-bottom: 1rem;
   color: var(--primary);
   font-size: 3rem;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgba(9, 175, 244, 0.15);
-  opacity: 0.15;
-  transition: all 0.3s ease-in-out 0s;
+}
+.about__icons i__icons:hover .about__icons i {
+  color: var(--light);
+}
+.about__icons:hover {
+  background-color: var(--primary);
+  transform: translateY(-5px);
+}
+.about__icons:hover i {
+  color: var(--primary);
 }
 .about__content {
   margin-top: 2rem;
@@ -595,7 +602,7 @@ header .container__wrapper h1 {
 }
 .about__content h5 {
   font-size: clamp(2rem, 6vw, 2rem);
-  color: #fff;
+  color: var(--primary);
 }
 @media (min-width: 42rem) {
   .about__bottom {
@@ -654,17 +661,12 @@ header .container__wrapper h1 {
 .whychoose__image {
   margin: auto;
 }
-.whychoose__contents span {
-  font-size: 16px;
-  color: var(--primary);
-  font-weight: 500;
-}
 .whychoose__contents h2 {
   font-size: clamp(32px, 6vw, 48px);
-  color: #fff;
+  color: var(--primary);
 }
 .whychoose__contents p {
-  color: #fff;
+  color: var(--primary);
 }
 .whychoose__info {
   gap: 2rem;
@@ -687,7 +689,7 @@ header .container__wrapper h1 {
 }
 .whychoose__content h5 {
   font-size: clamp(2rem, 6vw, 2rem);
-  color: #fff;
+  color: var(--primary);
 }
 .whychoose__btn button {
   letter-spacing: 0.1rem;
@@ -726,14 +728,14 @@ header .container__wrapper h1 {
 .stats__box {
   width: 100%;
   margin-bottom: 2rem;
-  border: 1px solid #09aff4;
-  border-top: 5px solid #09aff4;
+  border: 1px solid var(--primary);
+  border-top: 5px solid var(--primary);
   border-radius: 5px;
   padding: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: #fff;
+  color: var(--primary);
   flex-direction: column;
 }
 @media (min-width: 42rem) {
@@ -748,9 +750,220 @@ header .container__wrapper h1 {
 .stats__box .counter {
   font-size: 50px;
   font-weight: 600;
-  color: #fff;
+  color: var(--primary);
 }
 .stats__box p {
   font-size: 25px;
-  color: #fff;
+  color: var(--primary);
+}
+
+.clients {
+  background-color: var(--primary);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+@media (min-width: 42rem) {
+  .clients {
+    padding: 8rem;
+  }
+}
+.clients h2 {
+  text-align: center;
+  color: var(--primary);
+  opacity: 0.7;
+}
+.clients__slider {
+  cursor: grabbing;
+}
+.clients__slider img {
+  cursor: pointer;
+  width: auto;
+  max-height: 125px;
+  margin: 5px;
+  border-radius: 0.25rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.clients__slider img:hover {
+  filter: grayscale(0%);
+}
+
+.team {
+  background-color: var(--secondary);
+}
+@media (min-width: 42rem) {
+  .team__wrapper {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 5rem;
+  }
+}
+.team__info .biography h3 {
+  color: var(--light);
+}
+.team__info .biography p {
+  color: var(--light);
+  font-size: 20px;
+}
+.team__info .certificates h3 {
+  color: var(--light);
+}
+.team__info .certificates__img {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  grid-column-gap: 3rem;
+}
+@media (min-width: 42rem) {
+  .team__info .certificates__img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+.team__info .skills__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.team__info .skills__text li {
+  color: var(--light);
+}
+.team__info .skills h3 {
+  margin-top: 5rem;
+  color: var(--light);
+}
+.team__info .skills__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+}
+@media (min-width: 42rem) {
+  .team__info .skills__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-column-gap: 10rem;
+  }
+}
+.team__info .skills .skillbar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #b8b8b8;
+  position: relative;
+  border-radius: 1rem;
+}
+.team__info .skills .skillbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: var(--primary);
+}
+.team__info .skills .skillbar.w-85::before {
+  width: 85%;
+}
+.team__info .skills .skillbar.w-70::before {
+  width: 70%;
+}
+.team__info .skills .skillbar.w-90::before {
+  width: 90%;
+}
+.team__info .skills .skillbar.w-100::before {
+  width: 100%;
+}
+.team__info .skills .skillbar.w-75::before {
+  width: 75%;
+}
+.team .work h3 {
+  margin-top: 5rem;
+  color: var(--light);
+}
+.team .work p {
+  margin-top: 2rem;
+  color: var(--light);
+  font-size: 20px;
+}
+.team .work__top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 5rem;
+}
+.team .work__top span {
+  color: var(--light);
+  font-size: 17.6px;
+}
+.team .work__top i {
+  color: var(--primary);
+}
+.team__profile {
+  background-color: #000531;
+  padding-bottom: 4rem;
+}
+.team__profile .details h5 {
+  margin-top: 2rem;
+  color: var(--light);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+.team__profile .details p {
+  text-align: center;
+  color: var(--light);
+}
+.team__socials {
+  text-align: center;
+}
+.team__socials .icons {
+  cursor: pointer;
+  margin-top: 2rem;
+  border-radius: 0.25rem;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  padding: 9px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.team__socials .icons i {
+  color: var(--light);
+  font-size: 2rem;
+}
+.team__socials .icons i__icons:hover .team__socials .icons i {
+  color: var(--primary);
+}
+.team__socials .icons:hover {
+  background-color: var(--light);
+  transform: translateY(-5px);
+}
+.team__socials .icons:hover i {
+  color: var(--primary);
+}
+.team__btn {
+  text-align: center;
+  margin-top: 4rem;
+}
+.team__btn button {
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  font-size: 17.6px;
+  padding: 8px 20px;
+  border: 2px solid var(--primary);
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: var(--light);
+  background-color: var(--primary);
+  font-weight: 500;
+}
+.team__btn button:hover {
+  background: var(--secondary);
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }/*# sourceMappingURL=main.min.css.map */

@@ -26,17 +26,12 @@
     margin: auto;
   }
   &__contents{
-    span{
-      font-size:16px;
-      color: $clr-primary;
-      font-weight: 500;
-    }
     h2{
       font-size: clamp(32px, 6vw, 48px);
-      color: #fff;
+      color: $clr-light;
     }
     p{
-      color: #fff;
+      color: $clr-light;
     }
   }
   &__details{
@@ -54,26 +49,41 @@
     }
     margin-bottom: .5rem;
   }
-  &__icons{
-    i{
-      margin-top: 3rem;
-      margin-right: 1.25rem;
-      margin-bottom: 1rem;
-      color: $clr-primary;
-      font-size: 3rem;
-      padding: 0.75rem;
-      border-radius: 0.25rem;
-      background-color:rgba(9, 175, 244, 0.15);opacity:0.15;
-      transition: all 0.3s ease-in-out 0s;
+  &__icons {
+  margin-top: 2rem;
+  position: relative;
+  display: inline-block;
+   width: 68px;
+   height: 68px;
+    background-color: rgba(9, 175, 244, 0.15); 
+    padding: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+
+    i {
+        color: $clr-primary; 
+        font-size: 3rem; 
+
+        &__icons:hover & {
+            color:$clr-light;
+        }
     }
 
-  }
+    &:hover {
+        background-color:$clr-primary; 
+        transform: translateY(-5px); 
+
+        i {
+            color: $clr-primary; 
+        }
+    }
+
+ }
   &__content{
     margin-top: 2rem;
     margin-bottom: 4rem;
     h5{
       font-size: clamp(2rem, 6vw, 2rem);
-      color: #fff;
+      color: $clr-primary;
     }
   }
   &__bottom{
@@ -134,17 +144,12 @@
     margin: auto;
   }
   &__contents{
-    span{
-      font-size:16px;
-      color: $clr-primary;
-      font-weight: 500;
-    }
     h2{
       font-size: clamp(32px, 6vw, 48px);
-      color: #fff;
+      color: $clr-primary;
     }
     p{
-      color: #fff;
+      color: $clr-primary;
     }
   }
   &__info{
@@ -165,7 +170,7 @@
     margin-bottom: 4rem;
     h5{
       font-size: clamp(2rem, 6vw, 2rem);
-      color: #fff;
+      color: $clr-primary;
     }
   }
   &__btn{
@@ -182,16 +187,13 @@
         color: $clr-light;
         background-color: $clr-primary;
         font-weight: 500;
-
          
       }
       button:hover {
         background: $clr-secondary;
         color: $clr-primary;
         border: 2px solid $clr-primary;
-        
-        
-        
+               
     }
 
 }
@@ -216,12 +218,12 @@
     }
    width: 100%;
    margin-bottom: 2rem;
-    border: 1px solid#09aff4;
-    border-top: 5px solid #09aff4;
+    border: 1px solid$clr-primary;
+    border-top: 5px solid $clr-primary;
     border-radius: 5px;
     padding: 20px;
     @include flex(space-evenly, center);
-    color: #fff;
+    color: $clr-primary;
     flex-direction: column;
 
     i{
@@ -231,11 +233,44 @@
     .counter{
       font-size: 50px;
       font-weight: 600;
-      color: #fff;
+      color: $clr-primary;
     }
     p{
       font-size: 25px;
-      color: #fff;
+      color: $clr-primary;
     }
+  }
+}
+
+// CLIENTS
+.clients{
+  background-color: $clr-primary;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @include mediaQuery{
+    padding: 8rem;
+  }
+ 
+  h2{
+    text-align: center;
+    color: $clr-primary;
+    opacity: 0.7;
+  }
+  &__slider{
+    cursor:grabbing;
+    img{
+      cursor:pointer;
+      width: auto;
+      max-height: 125px;
+      margin: 5px;
+      border-radius: 0.25rem;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+
+      &:hover{
+        filter:grayscale(0%);
+      }
+    }
+
   }
 }
