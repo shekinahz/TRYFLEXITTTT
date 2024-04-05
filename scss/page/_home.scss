@@ -64,7 +64,7 @@
         font-size: 3rem; 
 
         &__icons:hover & {
-            color:$clr-light;
+            color:#fff;
         }
     }
 
@@ -73,7 +73,7 @@
         transform: translateY(-5px); 
 
         i {
-            color: $clr-primary; 
+            color: #fff; 
         }
     }
 

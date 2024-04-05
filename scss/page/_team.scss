@@ -4,12 +4,40 @@
 @use "../components/" as *;
 @use "../vendor/" as *;
 
+.teambanner{
+    min-height:50vh;
+    background-image: url("../../images/inner-page-hero.jpg"), linear-gradient(rgba(8, 8, 8, 0.7),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 
+    &__wrapper{
+        h1{
+            color: #fff;
+            font-size: 56px;   
+            margin-bottom: 0;        
+        }
+        h6{
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            span{
+                opacity: 70%;
+            }
+        }
+    }
+}
 .team{
+    padding-bottom: 5rem;
+   padding-top: 5rem;
     background-color: $clr-secondary;
  &__wrapper{
     @include mediaQuery{
-        @include unevenGrid(4fr 1fr, 5rem)
+        @include unevenGrid(3fr 1fr, 5rem)
     }
     
  }
@@ -17,6 +45,7 @@
     .biography{
         h3{
             color: $clr-light;
+            font-size: 32px;
         }
         p{
             color: $clr-light;
@@ -24,8 +53,10 @@
         }
     }
     .certificates{
+        margin-top: 5rem;
         h3{
             color: $clr-light;
+            font-size: 32px;
         }
         &__img{
             @include mediaQuery{
@@ -36,6 +67,7 @@
         }
     }
     .skills {
+        margin-top: 5rem;
         &__text{
             @include flex (space-between);
             li{
@@ -44,6 +76,7 @@
         }
         h3{
             margin-top: 5rem;
+            font-size: 32px;
             color: $clr-light
         }
         &__wrapper {
@@ -121,7 +154,7 @@
     .details{
         h5{
             margin-top: 2rem;
-            color: $clr-light;
+            color: #fff;
             text-align: center;
             font-size: 24px;
             font-weight: 400;
@@ -147,16 +180,16 @@
         transition: background-color 0.3s, transform 0.3s;
       
           i {
-              color: $clr-light; 
+              color: #fff; 
               font-size: 2rem; 
       
               &__icons:hover & {
-                  color: $clr-primary;
+                  color: #fff;
               }
           }
       
           &:hover {
-              background-color: $clr-light; 
+              background-color: #fff; 
               transform: translateY(-5px); 
       
               i {
@@ -181,7 +214,7 @@
       border-bottom-right-radius: 0.5rem;
       color: $clr-light;
       background-color: $clr-primary;
-      font-weight: 500;
+      
 
        
     }
